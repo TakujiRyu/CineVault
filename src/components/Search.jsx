@@ -1,13 +1,18 @@
-import React from 'react'
-import './search.css'
+import React from "react";
+import "./search.css";
 
-function Search() {
+function Search({ searchQuery, setSearchQuery }) {
   return (
-    <div className='search'>
-        <input type="text" placeholder='Search' />
-        <ion-icon name="search-outline"></ion-icon>
+    <div className="search">
+      <input
+        type="text"
+        placeholder="Search movies or blogs"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+      <ion-icon name="search-outline"></ion-icon>
     </div>
-  )
+  );
 }
 
-export default Search
+export default Search;

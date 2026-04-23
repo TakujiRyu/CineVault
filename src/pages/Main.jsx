@@ -4,12 +4,12 @@ import Schedule from "./Schedule";
 import Trend from "./Trend";
 import Blog from "./Blog";
 
-function Main() {
+function Main({ searchQuery }) {
   return (
     <main>
-      <Schedule />
-      <Trend />
-      <Blog />
+      <Schedule searchQuery={searchQuery} />
+      <Trend searchQuery={searchQuery} />
+      <Blog searchQuery={searchQuery} />
     </main>
   );
 }

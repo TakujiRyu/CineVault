@@ -32,3 +32,9 @@
     color: #ffffff;
     border-right: 1px solid #ffffff;
 }
+
+.search {
+    position: relative;
+    width: 320px;
+    height: 40px;
+}

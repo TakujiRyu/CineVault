@@ -7,7 +7,7 @@ import Search from "../components/Search";
 import Button from "../components/Button";
 import { supabase } from "../lib/supabaseClient";
 
-function Header({ scroll, user }) {
+function Header({ scroll, user, searchQuery, setSearchQuery }) {
   const [navList, setNavList] = useState(navListData);
   const navigate = useNavigate();
 
@@ -38,7 +38,7 @@ function Header({ scroll, user }) {
         ))}
       </ul>
 
-      <Search />
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       <div className="authActions">
         {user ? (

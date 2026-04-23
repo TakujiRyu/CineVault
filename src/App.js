@@ -17,12 +17,17 @@ import Profile from './pages/Profile';
 import Player from './pages/Player';
 import { supabase } from './lib/supabaseClient';
 
-function HomePage({ scroll, user }) {
+function HomePage({ scroll, user, searchQuery, setSearchQuery }) {
   return (
     <>
-      <Header scroll={scroll} user={user} />
+      <Header
+        scroll={scroll}
+        user={user}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
       <Banner />
-      <Main />
+      <Main searchQuery={searchQuery} />
       <Footer />
       <BackToTopBtn scroll={scroll} />
     </>
@@ -32,6 +37,7 @@ function HomePage({ scroll, user }) {
 function App() {
   const [scroll, setScroll] = useState(0);
   const [user, setUser] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +72,17 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<HomePage scroll={scroll} user={user} />} />
+      <Route
+        path="/"
+        element={
+          <HomePage
+            scroll={scroll}
+            user={user}
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
+        }
+      />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
