@@ -1,14 +1,9 @@
 import React from "react";
 import "./movieSwiper.css";
-
-// Import Swiper Styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-// Import Swiper React Components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Required Modules
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 
 function MovieSwiper({ slides, slideChange }) {
@@ -37,7 +32,7 @@ function MovieSwiper({ slides, slideChange }) {
         <SwiperSlide key={slide._id}>
           <img
             src={slide.previewImg}
-            alt="Preview Image"
+            alt={slide.title}
             onClick={() => slideChange(slide._id)}
           />
         </SwiperSlide>

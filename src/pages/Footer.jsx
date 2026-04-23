@@ -7,9 +7,10 @@ function Footer() {
     "Home",
     "Movies",
     "My List",
-    "Terms of service",
+    "Terms of Service",
     "Privacy Policy",
   ];
+
   const locations = [
     "Dolorum optia",
     "Non rem rerum",
@@ -17,6 +18,7 @@ function Footer() {
     "Justo eget",
     "Fermentum iaculis",
   ];
+
   return (
     <footer id="footer" className="footer">
       <div className="footer-top">
@@ -27,22 +29,45 @@ function Footer() {
                 <span>CINEVault</span>
               </a>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut
-                reiciendis suscipit aspernatur incidunt, sed, velit magni
-                inventore illo aliquid architecto eum ad sit atque vero libero
-                facere omnis, nihil tenetur.
+                CineVault is a privacy-aware movie streaming platform designed
+                to let users watch content, manage their lists, and control
+                their data preferences in one place.
               </p>
               <div className="social-links mt-3">
-                <a href="#" className="twitter">
+                <a
+                  href="https://twitter.com"
+                  className="twitter"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Twitter"
+                >
                   <ion-icon name="logo-twitter"></ion-icon>
                 </a>
-                <a href="#" className="facebook">
+                <a
+                  href="https://facebook.com"
+                  className="facebook"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Facebook"
+                >
                   <ion-icon name="logo-facebook"></ion-icon>
                 </a>
-                <a href="#" className="instagram">
+                <a
+                  href="https://instagram.com"
+                  className="instagram"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram"
+                >
                   <ion-icon name="logo-instagram"></ion-icon>
                 </a>
-                <a href="#" className="youtube">
+                <a
+                  href="https://youtube.com"
+                  className="youtube"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="YouTube"
+                >
                   <ion-icon name="logo-youtube"></ion-icon>
                 </a>
               </div>
@@ -74,9 +99,8 @@ function Footer() {
                 <br />
                 Bhutan <br />
                 <br />
-                <strong>Phone:</strong> +975 77216679
+                <strong>Phone:</strong> +975 77216679 <br />
                 <strong>Email:</strong> kinchap176@gmail.com
-                <br />
               </p>
             </div>
           </div>
@@ -85,15 +109,13 @@ function Footer() {
 
       <div className="container">
         <div className="copyright">
-          &copy; Copyright{""}
+          &copy; Copyright{" "}
           <strong>
-            <span>DStudio Techonology</span>
+            <span>DStudio Technology</span>
           </strong>
-          .All Rights Reserved
+          . All Rights Reserved
         </div>
-        <div className="credits">
-          Designed by <a href="#"> DStudio Technology</a>
-        </div>
+        <div className="credits">Designed by DStudio Technology</div>
       </div>
     </footer>
   );

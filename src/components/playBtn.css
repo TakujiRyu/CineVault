@@ -67,3 +67,9 @@
         filter: blur(10px);
     }
 }
+
+.playBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}

@@ -36,3 +36,11 @@
 .footer .footer-top .footer-links ul a:hover {
     color: var(--primary);
 }
+
+.footerNavBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    cursor: pointer;
+}

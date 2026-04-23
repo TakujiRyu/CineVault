@@ -6,25 +6,27 @@ function BlogCard({ blog }) {
     <div className="blog col-xl-3 col-md-6 mb-4">
       <article>
         <div className="post-img">
-          <img src={blog.thumbnail} alt="" className="img-fluid" />
+          <img src={blog.thumbnail} alt={blog.title} className="img-fluid" />
         </div>
 
         <p className="post-category">{blog.category}</p>
 
         <h2 className="title">
-          <a href="#">{blog.title}</a>
+          <button type="button" className="blogTitleBtn">
+            {blog.title}
+          </button>
         </h2>
 
         <div className="d-flex align-items-center">
           <img
             src={blog.author.image}
-            alt=""
+            alt={blog.author.name}
             className="img-fluid post-author-img flex-shrink-0"
           />
           <div className="post-meta">
             <p className="post-author-list">{blog.author.name}</p>
             <p className="post-date">
-              <time datetime="2022-01-01">{blog.date}</time>
+              <time dateTime={blog.date}>{blog.date}</time>
             </p>
           </div>
         </div>

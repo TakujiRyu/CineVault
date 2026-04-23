@@ -4,6 +4,7 @@ import Modal from "./Modal";
 
 function PlayBtn({ movie }) {
   const [modal, setModal] = useState(false);
+
   const toggleModal = () => {
     setModal(!modal);
   };
@@ -11,11 +12,16 @@ function PlayBtn({ movie }) {
   return (
     <>
       <div
-        className={`trailer d-flex align-items-center justify-content-center ${movie.active ? "active" : undefined}`}
+        className={`trailer d-flex align-items-center justify-content-center ${movie.active ? "active" : ""}`}
       >
-        <a href="#" className="playBtn" onClick={toggleModal}>
+        <button
+          type="button"
+          className="playBtn"
+          onClick={toggleModal}
+          aria-label={`Watch trailer for ${movie.title}`}
+        >
           <ion-icon name="play-outline"></ion-icon>
-        </a>
+        </button>
         <p>Watch Trailer</p>
       </div>
       {movie.active && (

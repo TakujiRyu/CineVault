@@ -58,3 +58,12 @@
     color: #ffffff;
     margin-bottom: 0;
 }
+
+.blogTitleBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}

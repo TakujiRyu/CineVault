@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./banner.css";
-import bgImg from "../images/bg-transformer.jpg";
 import MovieContent from "../components/MovieContent";
 import MovieDate from "../components/MovieDate";
 import PlayBtn from "../components/PlayBtn";
@@ -36,11 +35,11 @@ function Banner() {
       {movies &&
         movies.length > 0 &&
         movies.map((movie) => (
-          <div className="movie">
+          <div className="movie" key={movie._id}>
             <img
               src={movie.bgImg}
-              alt="Background Image"
-              className={`bgImg ${movie.active ? "active" : undefined}`}
+              alt=""
+              className={`bgImg ${movie.active ? "active" : ""}`}
             />
             <div className="container-fluid">
               <div className="row">

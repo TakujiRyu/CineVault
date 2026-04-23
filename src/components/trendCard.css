@@ -21,3 +21,10 @@
 .trend-card a:hover {
     background: #191919;
 }
+
+.trendCardBtn {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
