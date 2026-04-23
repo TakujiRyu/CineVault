@@ -1,0 +1,122 @@
+.authPage {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.9)),
+        url('../../public/assets/movies/bg-transformer.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 40px;
+}
+
+.authCard {
+    width: 100%;
+    max-width: 460px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 55, 0, 0.35);
+    backdrop-filter: blur(18px);
+    padding: 40px 30px;
+    color: #ffffff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.authCard h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.authSubtitle {
+    color: #cccccc;
+    margin-bottom: 24px;
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 0.95rem;
+    color: #f1f1f1;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    outline: none;
+}
+
+.inputGroup input::placeholder {
+    color: #bbbbbb;
+}
+
+.inputGroup input:focus {
+    border-color: var(--primary);
+}
+
+.authBtn {
+    width: 100%;
+    border: none;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 12px 16px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.authBtn:hover {
+    background: #ffffff;
+    color: var(--primary);
+}
+
+.authBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.authError,
+.authSuccess {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+}
+
+.authError {
+    background: rgba(255, 0, 0, 0.12);
+    border: 1px solid rgba(255, 0, 0, 0.35);
+    color: #ffb3b3;
+}
+
+.authSuccess {
+    background: rgba(0, 255, 128, 0.12);
+    border: 1px solid rgba(0, 255, 128, 0.35);
+    color: #b9ffd7;
+}
+
+.authLinks {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.authLinks a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.authLinks a:hover {
+    text-decoration: underline;
+}

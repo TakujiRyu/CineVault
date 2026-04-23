@@ -1,0 +1,31 @@
+.mainBtn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-right: 15px;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 8px 18px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer !important;
+    border: none;
+    outline: none;
+}
+
+.mainBtn:hover {
+    color: var(--primary) !important;
+    background: #ffffff !important;
+    cursor: pointer !important;
+}
+
+.mainBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed !important;
+}

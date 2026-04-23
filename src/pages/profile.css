@@ -1,0 +1,323 @@
+.profilePage {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.94)),
+        url("../../public/assets/movies/bg-transformer.jpg") center/cover no-repeat;
+    padding: 120px 80px 60px;
+    color: #ffffff;
+}
+
+.profileWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profileTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.profileTitle,
+.profileHeading {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.profileSubtitle {
+    color: #cccccc;
+    font-size: 1rem;
+}
+
+.profileTabs {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.profileTabs button {
+    border: none;
+    padding: 12px 22px;
+    background: #191919;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profileTabs button.active,
+.profileTabs button:hover {
+    background: var(--primary);
+}
+
+.profileSection {
+    margin-top: 20px;
+}
+
+.profileSectionTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.profileGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.profileCard {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 55, 0, 0.2);
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+}
+
+.profileCard img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.profileCardBody {
+    padding: 18px;
+}
+
+.profileCardBody h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.profileCardBody p {
+    color: #dddddd;
+    margin-bottom: 10px;
+}
+
+.profileMeta {
+    display: block;
+    color: #bbbbbb;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.profileCardActions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.profileActionBtn,
+.profileLinkBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 10px 18px;
+    background: var(--primary);
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.profileActionBtn:hover,
+.profileLinkBtn:hover {
+    background: #ffffff;
+    color: var(--primary);
+}
+
+.profileLinkBtn.secondary,
+.secondaryBtn {
+    background: #1f1f1f;
+}
+
+.profileLinkBtn.secondary:hover,
+.secondaryBtn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.dangerBtn {
+    background: #7a1f1f;
+}
+
+.dangerBtn:hover {
+    background: #ffffff;
+    color: #7a1f1f;
+}
+
+.profileEmpty {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #cccccc;
+    text-align: center;
+}
+
+.profileEmptyActions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.profileError,
+.profileSuccess {
+    margin-bottom: 20px;
+    padding: 14px 16px;
+}
+
+.profileError {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.35);
+    color: #ffbcbc;
+}
+
+.profileSuccess {
+    background: rgba(0, 255, 128, 0.12);
+    border: 1px solid rgba(0, 255, 128, 0.35);
+    color: #b9ffd7;
+}
+
+.privacyPanel {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 55, 0, 0.2);
+    padding: 30px;
+    backdrop-filter: blur(12px);
+}
+
+.privacyPanel h2 {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.privacyIntro {
+    color: #cccccc;
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.privacyOption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.privacyOption:last-of-type {
+    border-bottom: none;
+}
+
+.privacyOption h4 {
+    margin-bottom: 6px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.privacyOption p {
+    color: #cccccc;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.privacyBlock {
+    margin-top: 28px;
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.privacyBlock h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.privacyBlock p {
+    color: #cccccc;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.privacyActionRow {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.privacyActions {
+    margin-top: 24px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    background-color: #444444;
+    transition: 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.switch input:checked+.slider {
+    background-color: var(--primary);
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+@media (max-width: 768px) {
+    .profilePage {
+        padding: 110px 20px 40px;
+    }
+
+    .profileTitle,
+    .profileHeading {
+        font-size: 2rem;
+    }
+
+    .profileCard img {
+        height: 280px;
+    }
+
+    .privacyOption {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
