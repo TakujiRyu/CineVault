@@ -10,7 +10,7 @@ function Trend({ searchQuery }) {
   const [slides, setSlides] = useState([]);
 
   const fectchData = () => {
-    fetch("http://localhost:3000/data/movieData.json")
+    fetch("/data/movieData.json")
       .then((res) => res.json())
       .then((data) => {
         setSlides(data);
@@ -24,7 +24,6 @@ function Trend({ searchQuery }) {
 
   const filteredSlides = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
-
     if (!query) return slides;
 
     return slides.filter((slide) => {
@@ -47,22 +46,10 @@ function Trend({ searchQuery }) {
           {filteredSlides.length > 0 ? (
             <Swiper
               breakpoints={{
-                320: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                400: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                },
-                640: {
-                  slidesPerView: 4,
-                  spaceBetween: 30,
-                },
-                992: {
-                  slidesPerView: 6,
-                  spaceBetween: 30,
-                },
+                320: { slidesPerView: 1, spaceBetween: 20 },
+                400: { slidesPerView: 3, spaceBetween: 30 },
+                640: { slidesPerView: 4, spaceBetween: 30 },
+                992: { slidesPerView: 6, spaceBetween: 30 },
               }}
               spaceBetween={30}
               autoplay={{

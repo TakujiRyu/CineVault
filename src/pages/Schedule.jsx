@@ -17,7 +17,7 @@ function Schedule({ searchQuery }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const fectchData = () => {
-    fetch("http://localhost:3000/data/movieData.json")
+    fetch("/data/movieData.json")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((e) => console.log(e.message));
@@ -40,13 +40,11 @@ function Schedule({ searchQuery }) {
 
   const filteredMovies = useMemo(() => {
     let result = [...data];
-
     if (selectedCategory !== "All") {
       result = result.filter((movie) => movie.category === selectedCategory);
     }
 
     const query = searchQuery.trim().toLowerCase();
-
     if (!query) return result;
 
     return result.filter((movie) => {

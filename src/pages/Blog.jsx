@@ -6,7 +6,7 @@ function Blog({ searchQuery }) {
   const [blogs, setBlogs] = useState([]);
 
   const fectchData = () => {
-    fetch("http://localhost:3000/data/blogData.json")
+    fetch("/data/blogData.json")
       .then((res) => res.json())
       .then((data) => {
         setBlogs(data);
@@ -20,7 +20,6 @@ function Blog({ searchQuery }) {
 
   const filteredBlogs = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
-
     if (!query) return blogs;
 
     return blogs.filter((blog) => {
